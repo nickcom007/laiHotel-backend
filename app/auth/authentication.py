@@ -11,7 +11,7 @@ from ..model import schemas
 from .password import verify_password
 from jose import jwt, JWTError
 from sqlalchemy.orm import Session
-from ..crud.user import get_user
+from ..services.user import get_user
 from ..dependencies import get_db
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")

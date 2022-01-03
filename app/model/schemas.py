@@ -31,9 +31,6 @@ class User(UserBase):
     class Config:
         orm_mode = True
 
-'''
-Authority Schema
-'''
 
 class Authority(BaseModel):
 
