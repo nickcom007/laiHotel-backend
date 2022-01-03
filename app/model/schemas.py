@@ -55,14 +55,15 @@ class Reservation(BaseModel):
     class Config:
         orm_model = True
 
-class Stay(BaseModel):
 
-    id: int
+class StayCreate(BaseModel):
+    
     name: str
     address: str
     guest_number: int
     description: str
-    user_id: str
+
+class Stay(StayCreate):
 
     class Config:
         orm_model = True

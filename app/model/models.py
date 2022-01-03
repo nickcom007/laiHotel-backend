@@ -37,7 +37,7 @@ class Stay(Base):
     '''
     __tablename__ = "stay"
 
-    id = Column(BigInteger, primary_key=True)
+    id = Column(String(255), index = True, primary_key=True)
     name = Column(String(255))
     address = Column(String(255))
     guest_number = Column(SmallInteger)
@@ -50,6 +50,6 @@ class StayAvailability(Base):
     '''
     __tablename__ = 'stay_availability'
 
-    date = Column(Date)
+    date = Column(Date, primary_key=True)
     state = Column(SmallInteger)
-    stay_id = Column(BigInteger, ForeignKey("stay.id"))
+    stay_id = Column(String(255), ForeignKey("stay.id"), primary_key=True) 
